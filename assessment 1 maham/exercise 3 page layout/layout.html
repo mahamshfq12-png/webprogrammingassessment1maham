@@ -1,0 +1,232 @@
+<!DOCTYPE html> <!-- Declares HTML5 document -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> <!-- Character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Makes the page responsive on different screen sizes -->
+    <title>Maham's Gallery</title> <!-- Page title -->
+
+    <style>
+        * {
+            margin: 0;
+            /* Removes default margin */
+            padding: 0;
+            /* Removes default padding */
+            box-sizing: border-box;
+            /* Includes padding and border in element width */
+        }
+
+        body {
+            background-color: #4e6e6d;
+            /* Background color of page */
+            font-family: Georgia, "Times New Roman", serif;
+            /* Main font style */
+            color: #000;
+            /* Text color */
+        }
+
+        header {
+            text-align: center;
+            /* Centers header text */
+            padding: 30px 20px 10px;
+        }
+
+        header h1 {
+            font-size: 64px;
+            /* Large title */
+            font-weight: 900;
+            font-family: Georgia, serif;
+            letter-spacing: -1px;
+        }
+
+        nav {
+            display: flex;
+            /* Flexbox layout for navigation */
+            justify-content: center;
+            gap: 80px;
+            padding: 14px 0 20px;
+        }
+
+        nav a {
+            color: #ad95f081;
+            text-decoration: underline;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+        }
+
+        nav a:hover {
+            color: #9595f8;
+            /* Hover color effect */
+        }
+
+        .intro {
+            padding: 10px 20px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .intro .float-img {
+            float: right;
+            /* Floats image to the right */
+            margin: 0 0 10px 20px;
+            width: 380px;
+            height: 370px;
+            object-fit: cover;
+        }
+
+        .intro p {
+            font-size: 15.5px;
+            line-height: 1.6;
+            margin-bottom: 16px;
+            font-family: Arial, sans-serif;
+        }
+
+        .gallery-grid {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .row {
+            display: flex;
+            /* Flexbox for image rows */
+            width: 100%;
+        }
+
+        .row .cell {
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .row .cell img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Row 1 layout */
+        .row1 .cell-video {
+            width: 60%;
+            height: 240px;
+        }
+
+        .row1 .cell-photo {
+            width: 40%;
+            height: 240px;
+        }
+
+        .row1 video {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        /* Row 2 layout */
+        .row2 .cell {
+            width: 33.333%;
+            height: 230px;
+        }
+
+        /* Row 3 layout */
+        .row3 .cell-wide {
+            width: 62%;
+            height: 230px;
+        }
+
+        .row3 .cell-narrow {
+            width: 38%;
+            height: 230px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header> <!-- Gallery title -->
+        <h1>Maham's Gallery</h1>
+    </header>
+
+    <nav> <!-- Navigation menu -->
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Gallery</a>
+    </nav>
+
+    <!-- Introduction section with floating image and description -->
+    <div class="intro">
+
+        <img class="float-img" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Mountain lake" />
+
+        <p>
+            Photography allows people to capture special moments and preserve them for the future.
+            Through photographs and videos we can explore beautiful landscapes, wildlife, and natural
+            scenery from around the world. A gallery is a place where these memories are shared so
+            others can enjoy the beauty of nature and the creativity behind photography.
+        </p>
+
+        <p>
+            This gallery displays a collection of nature photography including mountains, forests,
+            oceans, and peaceful landscapes. Each image captures a different environment and
+            demonstrates how photography can tell a story through visuals. The goal of this gallery
+            is to showcase the beauty of nature and inspire people to appreciate the world around them.
+        </p>
+
+    </div>
+
+    <div class="gallery-grid"> <!-- Gallery grid containing images and video -->
+
+        <!-- Row 1 -->
+        <div class="row row1">
+
+            <div class="cell cell-video">
+                <!-- Video element -->
+                <video autoplay muted loop controls>
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="cell cell-photo">
+                <!-- Image beside the video -->
+                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Forest road" />
+            </div>
+
+        </div>
+
+        <!-- Row 2 -->
+        <div class="row row2">
+
+            <div class="cell">
+                <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e" alt="Lake">
+            </div>
+
+            <div class="cell">
+                <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e" alt="Mountains">
+            </div>
+
+            <div class="cell">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Ocean">
+            </div>
+
+        </div>
+
+        <!-- Row 3 -->
+        <div class="row row3">
+
+            <div class="cell cell-wide">
+                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e" alt="Forest">
+            </div>
+
+            <div class="cell cell-narrow">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Lake mountains">
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
